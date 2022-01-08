@@ -44,11 +44,16 @@ while g.x <= fin[0] or g.y >= fin[1]:
     eX.append(g.x)
     eY.append(g.y)
 
-plt.plot([0,0], [-1, 1], color='#999999')
-plt.plot([-1, 1], [0,0], color='#999999')
+plt.plot([0,0], [-1.2, 1.2], color='#999999')
+plt.plot([-1.2, 1.2], [0,0], color='#999999')
 plt.plot([0], [0], 'or')
-plt.plot(eX, eY)
-plt.show()
+plt.plot(eX, eY, label='Ziemia')
+plt.title(f'Ziemia')
+plt.xlabel('x[AU]')
+plt.ylabel('y[AU]')
+plt.legend()
+plt.savefig("earth.png")
+plt.clf()
 
 # VENUS
 
@@ -67,21 +72,30 @@ while g.x <= fin[0] or g.y >= fin[1]:
     vX.append(g.x)
     vY.append(g.y)
 
-plt.plot([0,0], [-1, 1], color='#999999')
-plt.plot([-1, 1], [0,0], color='#999999')
+plt.plot([0,0], [-1.2, 1.2], color='#999999')
+plt.plot([-1.2, 1.2], [0,0], color='#999999')
 plt.plot([0], [0], 'or')
-plt.plot(vX, vY)
-plt.show()
+plt.plot(vX, vY, label='Venus')
+plt.title(f'Venus')
+plt.xlabel('x[AU]')
+plt.ylabel('y[AU]')
+plt.legend()
+plt.savefig("venus.png")
+plt.clf()
 
 # BOTH
 
-plt.plot([0,0], [-1, 1], color='#999999')
-plt.plot([-1, 1], [0,0], color='#999999')
+plt.plot([0,0], [-1.2, 1.2], color='#999999')
+plt.plot([-1.2, 1.2], [0,0], color='#999999')
 plt.plot([0], [0], 'or')
-plt.plot(eX, eY)
-plt.plot(vX, vY)
-plt.show()
-
+plt.plot(eX, eY, label='Ziemia')
+plt.plot(vX, vY, label='Wenus')
+plt.title(f'Ziemia i Wenus')
+plt.xlabel('x[AU]')
+plt.ylabel('y[AU]')
+plt.legend()
+plt.savefig("ev.png")
+plt.clf()
 
 # PARAMS
 
